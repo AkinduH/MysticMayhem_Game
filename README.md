@@ -1,3 +1,5 @@
+# Mystic Mayhem
+
 Mystic Mayhem is a turn-based combat game developed in Java as an object-oriented programming project. 
 
 The game features two players, each with an army consisting of an Archer, a Knight, a Mage, a Healer, and a Mythical Creature. 
