@@ -296,7 +296,7 @@ public class CreatePlayers implements Serializable {
                 player.armour[0] = null;
                 player.artefact[0] = null;
                 System.out.println("\u001B[32m" + "New " + selected.getName() + " successfully bought." + "\u001B[0m");
-                return selected;
+                return new Archer((Archer) selected);
             } else if (selected instanceof Knight) {
                 player.setCoins(player.getCoins() + (int) Math.round(0.9 * player.army.get(1).getPrice()));
                 System.out.println("\u001B[31m" + "Previouse " + player.army.get(1).getName() + " was sold." + "\u001B[0m");
@@ -304,7 +304,7 @@ public class CreatePlayers implements Serializable {
                 player.armour[1] = null;
                 player.artefact[1] = null;
                 System.out.println("\u001B[32m" + "New " + selected.getName() + " successfully bought." + "\u001B[0m");
-                return selected;
+                return new Knight((Knight) selected);
             } else if (selected instanceof Mage) {
                 player.setCoins(player.getCoins() + (int) Math.round(0.9 * player.army.get(2).getPrice()));
                 System.out.println("\u001B[31m" + "Previouse " + player.army.get(2).getName() + " was sold." + "\u001B[0m");
@@ -312,7 +312,7 @@ public class CreatePlayers implements Serializable {
                 player.armour[2] = null;
                 player.artefact[2] = null;
                 System.out.println("\u001B[32m" + "New " + selected.getName() + " successfully bought." + "\u001B[0m");
-                return selected;
+                return new Mage((Mage) selected);
             } else if (selected instanceof Healer) {
                 player.setCoins(player.getCoins() + (int) Math.round(0.9 * player.army.get(3).getPrice()));
                 System.out.println("\u001B[31m" + "Previouse " + player.army.get(3).getName() + " was sold." + "\u001B[0m");
@@ -320,7 +320,7 @@ public class CreatePlayers implements Serializable {
                 player.armour[3] = null;
                 player.artefact[3] = null;
                 System.out.println("\u001B[32m" + "New " + selected.getName() + " successfully bought." + "\u001B[0m");
-                return selected;
+                return new Healer((Healer) selected);
             } else if (selected instanceof MythicalCreature) {
                 player.setCoins(player.getCoins() + (int) Math.round(0.9 * player.army.get(4).getPrice()));
                 System.out.println("\u001B[31m" + "Previouse " + player.army.get(4).getName() + " was sold." + "\u001B[0m");
@@ -328,7 +328,7 @@ public class CreatePlayers implements Serializable {
                 player.armour[4] = null;
                 player.artefact[4] = null;
                 System.out.println("\u001B[32m" + "New " + selected.getName() + " successfully bought." + "\u001B[0m");
-                return selected;
+                return new MythicalCreature((MythicalCreature) selected);
             } else {
                 return null;
             }
