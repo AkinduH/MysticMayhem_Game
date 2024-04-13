@@ -186,7 +186,6 @@ public class CreatePlayers implements Serializable {
         UserManager.addPlayer(player);
         System.out.println("\u001B[34m" + "Player created successfully!" + "\u001B[0m");
         Menu.PlayerMainMenu(player);
-        Menu.displayMainMenu();
     }
     public static void Buynewcharacters(Player player) {
 
